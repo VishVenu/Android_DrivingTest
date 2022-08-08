@@ -1,87 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/teal_200"
-    android:padding="24dp"
-    tools:context=".MainActivity">
-
+    tools:context=".MainActivity"
+    android:background="#e8f4f8"
+    android:gravity="center"
+    android:orientation="vertical">
+    <!-- Create a TextView to show the title. -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/total_question"
-        android:text="Total Questions "
-        android:layout_centerHorizontal="true"
-        android:textSize="20dp"/>
-
-
+        android:gravity="center"
+        android:text="Technology Awareness Quiz"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="50sp" />
+    <!-- Create an ImageButton for starting the game. -->
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/play"
+        android:onClick="startGame" />
+    <!-- Also create a TextView to show the text "Play" -->
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/question"
-        android:textStyle="bold"
-        android:text="This will be the question"
-        android:textColor="@color/white"
-        android:textSize="24dp"
-        android:textAlignment="center"
-        android:layout_margin="20dp"
-        android:layout_above="@id/choices_layout"/>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/choices_layout"
-        android:layout_centerInParent="true"
-        android:orientation="vertical">
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/ans_A"
-            android:layout_margin="5dp"
-            android:backgroundTint="@color/white"
-            android:text="Ans A"
-            android:textColor="@color/black"/>
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/ans_B"
-            android:layout_margin="5dp"
-            android:backgroundTint="@color/white"
-            android:text="Ans B"
-            android:textColor="@color/black"/>
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/ans_C"
-            android:layout_margin="5dp"
-            android:backgroundTint="@color/white"
-            android:text="Ans C"
-            android:textColor="@color/black"/>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/ans_D"
-            android:layout_margin="5dp"
-            android:backgroundTint="@color/white"
-            android:text="Ans D"
-            android:textColor="@color/black"/>
-
-    </LinearLayout>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/submit_btn"
-        android:text="Submit"
-        android:layout_below="@id/choices_layout"
-        android:layout_marginTop="40dp"/>
-
-
-
-</RelativeLayout>
+        android:text="Play"
+        android:textSize="40sp"
+        android:textColor="@android:color/holo_green_dark"
+        android:onClick="startGame" />
+    <!-- Both the ImageButton and the TextView are clickable and once clicked
+    startGame() method in MainActivity will be called. -->
+</LinearLayout>
