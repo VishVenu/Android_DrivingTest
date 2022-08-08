@@ -1,76 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#e8f4f8"
+    tools:context=".ResultScreen"
     android:gravity="center"
     android:padding="16dp">
-    <!-- Create a LinearLayout for showing restart and exit ImageButtons -->
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/restart"
-            android:onClick="restart" />
-        <!-- Create a filler View to push Exit ImageButton to the right. -->
-        <View
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/exit"
-            android:onClick="exit" />
-    </LinearLayout>
-    <!-- Create a filler View -->
     <View
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_weight="1" />
-    <!-- Create a LinearLayout for showing points and personal best. -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_margin="5dp"
+            app:srcCompat="@drawable/victory" />
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
             android:gravity="center"
             android:orientation="horizontal">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Points: "
-                android:textColor="#0b80a7"
-                android:textSize="30sp" />
+                android:text="Score: "
+                android:textColor="@color/black"
+                android:textSize="30dp" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/tvPoints"
                 android:layout_weight="1"
+                android:textStyle="bold"
                 android:textColor="@android:color/holo_green_light"
-                android:textSize="60sp" />
+                android:textSize="30dp" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Personal best: "
-                android:textColor="#0b80a7"
-                android:textSize="30sp" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -80,18 +59,31 @@
                 android:textSize="30sp" />
         </LinearLayout>
     </LinearLayout>
-    <!-- Let's show the game over image with an ImageView -->
-    <ImageView
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        app:srcCompat="@drawable/game_over" />
-    <!-- Create another filler View to show the main content that is the points, personal best
-    and game over graphic in nearly the middle. -->
-    <View
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:text="Retry"
+            android:textStyle="bold"
+            android:background="@drawable/rounded_corner"
+            android:onClick="restart" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="quit "
+            android:layout_margin="30dp"
+            android:textStyle="bold"
+            android:background="@drawable/rounded_corner_next"
+            android:onClick="exit" />
+    </LinearLayout>
+     <View
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="64dp"
         android:layout_weight="1" />
-
 </LinearLayout>

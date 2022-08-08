@@ -3,8 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/rounded_corner.xml" value="0.222" />
+        <entry key="app/src/main/res/drawable/rounded_corner_next.xml" value="0.222" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.265625" />
         <entry key="app/src/main/res/layout/game_over.xml" value="0.13020833333333334" />
+        <entry key="app/src/main/res/layout/result_screen.xml" value="0.18115942028985507" />
+        <entry key="app/src/main/res/layout/start_driving_test.xml" value="0.18115942028985507" />
         <entry key="app/src/main/res/layout/start_game.xml" value="0.13020833333333334" />
       </map>
     </option>
