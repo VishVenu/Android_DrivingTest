@@ -39,29 +39,27 @@ public class StartDrivingTest extends AppCompatActivity {
         tvCount = findViewById(R.id.tvPoints);
         index = 0;
         questionNumber = 1;
-        roadSymbolList.add("Bootstrap");
-        roadSymbolList.add("C");
-        roadSymbolList.add("Codeigniter");
-        roadSymbolList.add("Cplusplus");
-        roadSymbolList.add("Csharp");
-        roadSymbolList.add("Css3");
-        roadSymbolList.add("Github");
-        roadSymbolList.add("Html5");
-        roadSymbolList.add("Java");
-        roadSymbolList.add("jQuery");
-        roadSymbolList.add("MySQL");
+        roadSymbolList.add("Bicycles may use this road");
+        roadSymbolList.add("No Bicycles allowed");
+        roadSymbolList.add("Don't drive through intersection");
+        roadSymbolList.add("No Entry");
+        roadSymbolList.add("No Left Turn");
+        roadSymbolList.add("No Parking");
+        roadSymbolList.add("No pedestrians allowed");
+        roadSymbolList.add("No standing");
+        roadSymbolList.add("No U-turn");
+        roadSymbolList.add("Snowmobiles may use this road");
 
-        map.put(roadSymbolList.get(0), R.drawable.bootstrap);
-        map.put(roadSymbolList.get(1), R.drawable.c);
-        map.put(roadSymbolList.get(2), R.drawable.codeigniter);
-        map.put(roadSymbolList.get(3), R.drawable.cplusplus);
-        map.put(roadSymbolList.get(4), R.drawable.csharp);
-        map.put(roadSymbolList.get(5), R.drawable.css3);
-        map.put(roadSymbolList.get(6), R.drawable.github);
-        map.put(roadSymbolList.get(7), R.drawable.html5);
-        map.put(roadSymbolList.get(8), R.drawable.java);
-        map.put(roadSymbolList.get(9), R.drawable.jquery);
-        map.put(roadSymbolList.get(10), R.drawable.mysql);
+        map.put(roadSymbolList.get(0), R.drawable.bicycle);
+        map.put(roadSymbolList.get(1), R.drawable.no_bicycle);
+        map.put(roadSymbolList.get(2), R.drawable.no_drive_thru);
+        map.put(roadSymbolList.get(3), R.drawable.no_entry);
+        map.put(roadSymbolList.get(4), R.drawable.no_left_turn);
+        map.put(roadSymbolList.get(5), R.drawable.no_parking);
+        map.put(roadSymbolList.get(6), R.drawable.no_pedestrians_allowed);
+        map.put(roadSymbolList.get(7), R.drawable.no_standing);
+        map.put(roadSymbolList.get(8), R.drawable.no_u_turn);
+        map.put(roadSymbolList.get(9), R.drawable.snow_mobiles);
 
         Collections.shuffle(roadSymbolList);
 
@@ -99,6 +97,9 @@ public class StartDrivingTest extends AppCompatActivity {
     }
 
     public void nextQuestion(View view) {
+        if(userChoice==null) {
+            return;
+        }
 
         btn1.setSelected(false);
         btn2.setSelected(false);

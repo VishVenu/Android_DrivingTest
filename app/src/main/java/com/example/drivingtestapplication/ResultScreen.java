@@ -17,7 +17,7 @@ public class ResultScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.result_screen);
 
-        int score = getIntent().getExtras().getInt("score");
+        int score = getIntent().getExtras().getInt("points");
         tvPoints = findViewById(R.id.tvPoints);
         tvPersonalBest = findViewById(R.id.tvPersonalBest);
         tvPoints.setText("" + score);
